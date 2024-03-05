@@ -8,7 +8,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class RedisUtil {
+public class RedisService {
     private final RedisTemplate<String, String> redisTemplate;
 
     // LPUSH
