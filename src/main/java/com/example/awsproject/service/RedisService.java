@@ -20,4 +20,8 @@ public class RedisService {
     public List<String> lRange(String key, int start, int stop) {
         return redisTemplate.opsForList().range(key, start, stop);
     }
+
+    public void deleteKey(String key) {
+        redisTemplate.delete(key);
+    }
 }
