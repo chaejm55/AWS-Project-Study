@@ -16,7 +16,7 @@ import java.util.List;
 public class RedisController {
     private final RedisService redisService;
     private final String LIST_KEY = "messages";
-
+    // endpoints
     @PostMapping("/messages")
     public ResponseEntity<String> setRedis(@RequestBody MessageDto messageDto) {
         redisService.lPush(LIST_KEY, messageDto.getMessage());
